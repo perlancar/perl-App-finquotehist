@@ -1,0 +1,34 @@
+#!perl
+
+# DATE
+# VERSION
+
+use 5.010001;
+use strict;
+use warnings;
+
+use Perinci::CmdLine::Any;
+
+my $prefix = '/App/finquotehist/';
+my $cli = Perinci::CmdLine::Any->new(
+    url => "${prefix}finquotehist",
+    log => 1,
+    log_level => 'info',
+);
+$cli->run;
+
+# ABSTRACT: Fetch historical stock quotes
+# PODNAME:
+
+=head1 DESCRIPTION
+
+B<EARLY RELEASE.>
+
+This script is a CLI interface for L<Finance::QuoteHist>.
+
+
+=head1 SEE ALSO
+
+L<Finance::QuoteHist>
+
+L<App::finquote> and L<Finance::Quote>
