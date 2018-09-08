@@ -111,7 +111,7 @@ sub finquotehist {
     if ($action eq 'list_engines') {
         require PERLANCAR::Module::List;
         my $mods = PERLANCAR::Module::List::list_modules(
-            "Finance::QuoteHist::", {list_modules=>1});
+            "Finance::QuoteHist::", {list_modules=>1, recurse=>1});
         return [200, "OK", [
             grep {!/\A(Generic)\z/}
                 map {my $x = $_; $x =~ s/\AFinance::QuoteHist:://; $x}
