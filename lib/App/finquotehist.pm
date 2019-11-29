@@ -1,6 +1,8 @@
 package App::finquotehist;
 
+# AUTHORITY
 # DATE
+# DIST
 # VERSION
 
 use 5.010001;
@@ -13,7 +15,7 @@ our %SPEC;
 my $sch_date = [
     'date*', {
         'x.perl.coerce_to' => 'DateTime',
-        'x.perl.coerce_rules' => ['str_natural'],
+        'x.perl.coerce_rules' => ['From_str::natural'],
     },
 ];
 
